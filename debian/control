@@ -1,0 +1,16 @@
+Source: rpirtc
+Section: unknown
+Priority: optional
+Maintainer: Filip Ayazi <filipayazi@gmail.com>
+Build-Depends: debhelper (>= 10)
+Standards-Version: 4.1.2
+Homepage: <insert the upstream URL, if relevant>
+#Vcs-Git: https://anonscm.debian.org/git/collab-maint/test.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/test.git
+
+Package: rpirtc
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, raspi-config, ntp, util-linux
+Description: RPi RTC Controller
+    Updates system time from the i2c RTC module at boot, writes time to the
+    RTC when NTP is available, checking every 5 min.

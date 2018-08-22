@@ -1,0 +1,2 @@
+systemctl enable rpirtc.service
+systemctl start rpirtc.service

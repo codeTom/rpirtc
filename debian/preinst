@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#enable i2c
+raspi-config nonint do_i2c 1

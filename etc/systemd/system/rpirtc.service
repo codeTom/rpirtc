@@ -1,0 +1,9 @@
+[Unit]
+Description=RPi RTC clock controller
+
+[Service]
+ExecStart=/usr/bin/rpirtc_start
+Type=oneshot
+
+[Install]
+WantedBy=multi-user.target
