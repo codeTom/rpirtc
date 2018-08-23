@@ -1,4 +1,7 @@
 #!/bin/bash
 
 #enable i2c
-raspi-config nonint do_i2c 1
+raspi-config nonint do_i2c 0
+
+#detect the device
+i2cdetect -y 1

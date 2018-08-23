@@ -1,0 +1,3 @@
+rpirtc_update /usr/bin/
+rpirtc_start /usr/bin/
+rtc_ds.conf /usr/lib/modules-load.d/

@@ -1,2 +1,5 @@
+#load the module
+modprobe rtc-ds1307
+
 systemctl enable rpirtc.service
 systemctl start rpirtc.service
