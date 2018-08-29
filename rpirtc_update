@@ -1,12 +1,9 @@
 #!/bin/bash
 
-#we need to stop the service to free the port
-service ntp stop
-#load the time and write to hwclock
-if ntpd -gq
+#if we have ntp time, write to hwclock
+if ntpstat
 then
-	hwclock -w
+	/sbin/hwclock -w
 	echo "Updated hwclock at "`date` >> /var/log/rtc
 fi
-sudo service ntp start
 

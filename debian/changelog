@@ -1,3 +1,8 @@
+rpirtc (0.1-7) unstable; urgency=medium
+  * Fix clock updates
+
+ -- Filip Ayazi <filipayazi@gmail.com>  Wed, 22 Aug 2018 17:39:36 +0100
+
 rpirtc (0.1-4) unstable; urgency=medium
 
   * Packaging fix
