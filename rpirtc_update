@@ -1,7 +1,6 @@
 #!/bin/bash
-
 #if we have ntp time, write to hwclock
-if ntpstat
+if ! [ -f /var/tmp/rpirtc_disable ] && ntpstat
 then
 	/sbin/hwclock -w
 	echo "Updated hwclock at "`date` >> /var/log/rtc

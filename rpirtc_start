@@ -5,3 +5,12 @@ echo ds1307 0x68 > /sys/class/i2c-adapter/i2c-1/new_device
 
 #load the time
 hwclock -s
+
+modprobe configs
+rm -f /var/tmp/rpirtc_disabled
+if ( zcat /proc/config.gz | grep "CONFIG_RTC_SYSTOHC=y" ) && ( zcat /proc/config.gz | grep 'CONFIG_RTC_SYSTOHC_DEVICE="rtc0"' )
+then
+    #Kernel will update rtc from system time, disabling our update
+    touch /var/tmp/rpirtc_disabled
+fi
+
