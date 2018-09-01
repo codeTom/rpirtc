@@ -1,0 +1,7 @@
+debian/files
+debian/rpirtc
+debian/.debhelper
+debian/build_stamp
+debian/*.debhelper
+debian/*.substvars
+debian/debhelper-build-stamp
